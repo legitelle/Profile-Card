@@ -1,0 +1,94 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+body{
+    background: blueviolet;
+    text-align: center;
+}
+
+header{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.flex-container{
+    display: flex;
+    background: mediumspringgreen;
+    flex-wrap: nowrap;
+    flex-flow: column;
+    height: 700px;
+    align-items: center;
+}
+
+nav{
+    background: mediumspringgreen;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    display: block;
+    padding: 15px;
+}
+
+nav a:hover{
+    background-color: pink;
+}
+
+@media screen and (min-width: 600px) {
+    nav ul{
+        display: flex;
+    }
+    nav li{
+        flex: 1 1 0;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+#pop-up{
+    position: relative;
+    top: 200px;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#pop-up .container{
+    background: #f0e4d4;
+    padding: 30px;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+#pop-up{
+    top: -5px;
+    animation: drop 1s ease forwards;
+    transform: translateX(500px)
+}
+
+@keyframes drop{
+    0%{opacity: 0}
+    70%{ transform: translateY(50px)}
+    100%{ transform: translateY(50px); opacity: 1}
+}
